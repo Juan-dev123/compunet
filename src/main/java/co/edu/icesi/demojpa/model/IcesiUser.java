@@ -2,8 +2,8 @@ package co.edu.icesi.demojpa.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 import java.util.UUID;
 
 @Data
@@ -13,5 +13,13 @@ public class IcesiUser {
     private UUID userId;
     private String firstName;
     private String lastName;
-    private String code;
+    private boolean isActive;
+    private String email;
+    private String password;
+
+    @OneToMany(mappedBy = "icesiUser")
+    private List<IcesiBlogPost> icesiBlogPostList;
+    @ManyToOne
+    @JoinColumn(name = "icesiRole_roleId")
+    private IcesiRole icesiRole;
 }
