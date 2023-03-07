@@ -7,5 +7,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @AllArgsConstructor
 public class CategoryController {
-    private final CategoryRepository categoryRepository;
+//    private final CategoryRepository categoryRepository;
 }

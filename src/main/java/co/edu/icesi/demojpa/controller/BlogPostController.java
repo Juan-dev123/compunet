@@ -7,5 +7,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @AllArgsConstructor
 public class BlogPostController {
-    private final BlogPostRepository blogPostRepository;
+//    private final BlogPostRepository blogPostRepository;
 }

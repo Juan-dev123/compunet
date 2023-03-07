@@ -7,5 +7,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @AllArgsConstructor
 public class RoleController {
-    private final RoleRepository roleRepository;
+//    private final RoleRepository roleRepository;
 }

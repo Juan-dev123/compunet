@@ -17,6 +17,7 @@ public class IcesiUser {
     private String email;
     private String password;
 
+
     @OneToMany(mappedBy = "icesiUser")
     private List<IcesiBlogPost> icesiBlogPostList;
     @ManyToOne
