@@ -18,7 +18,7 @@ public class UserService {
     private final UserMapper userMapper;
     public IcesiUser save(UserCreateDTO user) {
         if(userRepository.findByEmail(user.getEmail()).isPresent()){
-            throw new RuntimeException();
+            throw new RuntimeException("User already exists");
         }
         IcesiUser icesiUser = userMapper.fromIcesiUserDTO(user);
         icesiUser.setUserId(UUID.randomUUID());
@@ -28,7 +28,5 @@ public class UserService {
     public Optional<IcesiUser> findById(UUID fromString) {
         return null;
     }
-
-
 
 }
